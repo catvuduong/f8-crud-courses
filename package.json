@@ -7,28 +7,31 @@
     "makeup": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
-  "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 2 --write"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 2 --write"
+  },
   "dependencies": {
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "husky": "^7.0.4",
+    "mongoose": "^6.2.1",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1"
   },
   "devDependencies": {
     "lint-staged": "^12.3.3",
     "nodemon": "^2.0.15",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "husky": "^7.0.0"
   }
 }

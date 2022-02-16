@@ -2,3 +2,5 @@
 
 node_modules/
 src/public/css/
+
+.husky/pre-commit

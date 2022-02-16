@@ -14,7 +14,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --allow-empty"
     }
   },
   "lint-staged": {
@@ -24,14 +24,16 @@
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "husky": "^7.0.4",
+    "method-override": "^3.0.0",
     "mongoose": "^6.2.1",
+    "mongoose-slug-generator": "^1.0.4",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1"
   },
   "devDependencies": {
+    "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
     "nodemon": "^2.0.15",
-    "prettier": "^2.5.1",
-    "husky": "^7.0.0"
+    "prettier": "^2.5.1"
   }
 }

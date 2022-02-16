@@ -1,5 +1,15 @@
-@import 'variable';
+@import "variable";
 
-h1 {
-  color: $red-color;
+.crop {
+  overflow: hidden;
+  // white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 75px;
 }
+
+// .user-avatar {
+//   margin-top: 5px;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 15px;
+// }

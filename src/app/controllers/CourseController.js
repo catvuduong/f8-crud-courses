@@ -37,8 +37,16 @@ class CourseController {
 
     //[PUT] courese/:id
     update(req, res, next) {
+        s
         Course.updateOne({ _id: req.params.id }, req.body)
             .then(() => { res.redirect('/my-store/courses') })
+            .catch(next);
+    }
+
+    //[DELETE] courese/:id
+    delete(req, res, next) {
+        Course.deleteOne({ _id: req.params.id })
+            .then(() => { res.redirect('back') })
             .catch(next);
     }
 

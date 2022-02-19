@@ -7,8 +7,11 @@
  * 6.defaul behavior form. In search chrome its always GET METHOD, if u want set others not GET METHOD u have to 
  * set action=POST first.
  * 7. app.use(express.urlencoded({extended: true})); for form data, app.use(express.json()); for javascript.
- * 8. MCV 
+ * 8. MCV, install mongoose to connect data base by Model (Course).
+ * 
+ * 
  * Structure note
  * from index.js directory structure to views/resources => app.set('views', path.join(__dirname, './resources/views'));
  * app.use(express.static(path.join(__dirname, 'public'))); => its config localhost 3000 at public folder.
+ * jquery not work with es6.
  */

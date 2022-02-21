@@ -14,6 +14,15 @@ const Course = new Schema({
   level: { type: String }
 }, { timestamps: true });
 
+// Course.pre('updateOne', function (doc) {
+//   console.log(doc);
+//   this.set({
+//     slug: doc.slug.toLowerCase()
+//       .replace(/ /g, '-')
+//       .replace(/[^\w-]+/g, '')
+//   });
+// });
+
 Course.plugin(mongooseDelete, {
   overrideMethods: 'all',
   deletedAt: true

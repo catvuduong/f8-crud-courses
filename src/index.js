@@ -10,7 +10,7 @@ const db = require('./config/db');
 
 //Connect db
 db.connect();
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 //Middle ware
 //form data
 app.use(

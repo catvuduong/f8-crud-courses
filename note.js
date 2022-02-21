@@ -14,4 +14,5 @@
  * from index.js directory structure to views/resources => app.set('views', path.join(__dirname, './resources/views'));
  * app.use(express.static(path.join(__dirname, 'public'))); => its config localhost 3000 at public folder.
  * jquery not work with es6.
+ * input[name="courseIds[] syntax of jquery to count checkbox array inside.
  */

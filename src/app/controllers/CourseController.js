@@ -21,7 +21,7 @@ class CourseController {
     //[GET] courese/store
     store(req, res, next) {
         const formData = { ...req.body };
-        formData.image = `https://img.youtube.com/vi/${req.body.videoId}/0.jpg`
+        // formData.image = `https://img.youtube.com/vi/${req.body.videoId}/0.jpg`;
         const course = new Course(formData);
         course.save()
             .then(() => res.redirect('/my-store/courses'))
@@ -56,11 +56,27 @@ class CourseController {
             .catch(next);
     }
 
-    //[PATCH] courese/:id/restore
+    //[PATCH] course/:id/restore
     restore(req, res, next) {
         Course.restore({ _id: req.params.id })
             .then(() => { res.redirect('back') })
             .catch(next);
+    }
+
+    //[PATCH] course/handle-form-action
+    handleFormAction(req, res, next) {
+        console.log(req.body.courseIds);
+        switch (req.body.action) {
+            case "delete": {
+                Course.delete({ _id: { $in: req.body.courseIds } })
+                    .then(() => { res.redirect('back') })
+                    .catch(next);
+                break;
+            }
+            default:
+                res.json("Action is invalid!");
+                break;
+        }
     }
 
     index(req, res, next) {

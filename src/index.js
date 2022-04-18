@@ -43,7 +43,7 @@ app.engine('.hbs', engine({
       }
 
       const icon = icons[sortType];
-      const type = types[sortType]
+      const type = types[sortType];
 
       return `<a class="ml-2" href="?_sort&column=${field}&type=${type}">
         <span class="${icon}"></span>

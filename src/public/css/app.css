@@ -1,0 +1,18 @@
+.crop {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 75px; }
+
+.header-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 100rem; }
+
+.user-avatar {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+
+.store-course-option {
+  width: 160px; }
